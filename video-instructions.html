@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Presentation Guidelines - Clinical Orthopaedic Society 113th Annual Meeting</title>
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.4;
+    color: #333;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+}
+
+.header {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    padding: 1rem 0;
+    text-align: center;
+    box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+}
+
+.header h1 {
+    color: #2d3748;
+    font-size: 1.8rem;
+    margin-bottom: 0.25rem;
+    font-weight: 700;
+}
+
+.header p {
+    color: #4a5568;
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 1.5rem 1rem;
+}
+
+.content-card {
+    background: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease;
+}
+
+.content-card:hover {
+    transform: translateY(-2px);
+}
+
+.section-title {
+    color: #2b6cb0;
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.section-icon {
+    width: 28px;
+    height: 28px;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.section-content p {
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+    color: #4a5568;
+}
+
+.guidelines-list {
+    list-style: none;
+    padding: 0;
+}
+
+.guidelines-list li {
+    background: #f7fafc;
+    margin-bottom: 0.5rem;
+    padding: 1rem;
+    border-radius: 8px;
+    border-left: 3px solid #667eea;
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+}
+
+.guidelines-list li:hover {
+    background: #edf2f7;
+    transform: translateX(3px);
+}
+
+.guidelines-list li::before {
+    content: "✓";
+    color: #48bb78;
+    font-weight: bold;
+    margin-right: 0.75rem;
+    font-size: 1rem;
+}
+
+.submission-steps {
+    counter-reset: step-counter;
+}
+
+.submission-steps li {
+    counter-increment: step-counter;
+    position: relative;
+    padding-left: 3rem;
+}
+
+.submission-steps li::before {
+    content: counter(step-counter);
+    position: absolute;
+    left: 0.75rem;
+    top: 50%;
+    transform: translateY(-50%);
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 0.8rem;
+}
+
+.important-notice {
+    background: linear-gradient(135deg, #fed7d7, #feb2b2);
+    border: none;
+    border-radius: 12px;
+    padding: 1.25rem;
+    margin: 1rem 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.important-notice::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #e53e3e, #c53030);
+}
+
+.important-notice h3 {
+    color: #c53030;
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.deadline-text {
+    color: #2d3748;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.contact-section {
+    background: linear-gradient(135deg, #e6fffa, #b2f5ea);
+    border-radius: 12px;
+    padding: 1.25rem;
+    margin-top: 1rem;
+}
+
+.contact-section h3 {
+    color: #2c7a7b;
+    margin-bottom: 0.75rem;
+    font-size: 1.2rem;
+}
+
+.contact-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    margin-top: 0.75rem;
+}
+
+.contact-item {
+    background: white;
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.contact-item:hover {
+    transform: translateY(-2px);
+}
+
+.contact-item h4 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.contact-item p {
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+a {
+    color: #2b6cb0;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #2c5282;
+    text-decoration: underline;
+}
+
+.highlight-box {
+    background: linear-gradient(135deg, #e6fffa, #b2f5ea);
+    padding: 1rem;
+    border-radius: 8px;
+    margin: 0.75rem 0;
+    border-left: 3px solid #38b2ac;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+    .header h1 {
+        font-size: 1.5rem;
+    }
+    
+    .container {
+        padding: 1rem 0.75rem;
+    }
+    
+    .content-card {
+        padding: 1.25rem;
+    }
+    
+    .section-title {
+        font-size: 1.2rem;
+    }
+    
+    .contact-info {
+        grid-template-columns: 1fr;
+    }
+}
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>The Clinical Orthopaedic Society</h1>
+        <p>113th Annual Meeting - Video Presentation Guidelines</p>
+    </div>
+
+    <div class="container">
+        <div class="content-card">
+            <h2 class="section-title">
+                <div class="section-icon">📹</div>
+                Video Preparation Guidelines
+            </h2>
+            <div class="section-content">
+                <p>Follow these essential guidelines to ensure your video presentation meets our technical requirements and maintains the highest professional standards.</p>
+                <ul class="guidelines-list">
+                    <li><strong>File Format:</strong> Submit your video as a single MP4 file for optimal compatibility</li>
+                    <li><strong>File Size Limit:</strong> Maximum file size of 500MB to ensure smooth upload and playback</li>
+                    <li><strong>Patient Privacy:</strong> Ensure all patient information is anonymized and HIPAA compliant</li>
+                    <li><strong>Audio Requirements:</strong> Include clear audio narration - voice-over is encouraged for better presentation</li>
+                    <li><strong>Video Quality:</strong> Minimum 720p resolution recommended for clear viewing</li>
+                    <li><strong>Duration:</strong> Keep presentations between 10-15 minutes for optimal engagement</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="content-card">
+            <h2 class="section-title">
+                <div class="section-icon">📤</div>
+                Submission Process
+            </h2>
+            <div class="section-content">
+                <p>Follow these step-by-step instructions to submit your video presentation:</p>
+                <ol class="guidelines-list submission-steps">
+                    <li>Navigate to our secure upload portal at <a href="https://www.wetransfer.com/" target="_blank">https://www.wetransfer.com/</a></li>
+                    <li>Name your file using this format: <strong>"COS2025-[Your-submission-code].mp4"</strong></li>
+                    <li>Use <strong>support@scigentech.com</strong> as the recipient email address</li>
+                    <li>Enter the same email address you used for your abstract submission</li>
+                    <li>Include this message text:
+                        <div class="highlight-box">
+                            "Video Submission for The Clinical Orthopaedic Society 113th Annual Meeting - [Your submission code]"
+                        </div>
+                    </li>
+                    <li>Review all information carefully, then click "Transfer" to submit your file</li>
+                </ol>
+            </div>
+        </div>
+
+        <div class="important-notice">
+            <h3>⚠️ Important Deadline Notice</h3>
+            <div class="deadline-text">
+                Video presentations must be submitted by<br>
+                <strong>August 18th, 2025, at 11:59 PM (EST)</strong>
+            </div>
+        </div>
+
+        <div class="contact-section">
+            <h3>Need Help? We're Here to Support You</h3>
+            <p>If you have any questions or encounter technical difficulties, don't hesitate to reach out to our support team.</p>
+            
+            <div class="contact-info">
+                <div class="contact-item">
+                    <h4>📧 Email Support</h4>
+                    <p><a href="mailto:support@scigentech.com">support@scigentech.com</a></p>
+                </div>
+                <div class="contact-item">
+                    <h4>💬 Live Chat</h4>
+                    <p><a href="http://livesupport.eposterslive.com/" target="_blank">livesupport.eposterslive.com</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
